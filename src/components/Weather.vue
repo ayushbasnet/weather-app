@@ -1,18 +1,13 @@
 <template>
   <div class="weather">
     <div class="search-box">
-      <input
-        type="text"
-        class="search-bar"
-        placeholder="Search..."
-        v-model="query"
-        @keypress="fetchWeather"
-      />
       <select v-model="selected">
         <option v-for="place in places" v-bind:key="place.id">
           {{ place.text }}
         </option>
       </select>
+
+      <button @click="fetchWeather" type="button" name="button">Display</button>
     </div>
     <div
       class="weather-wrap"
@@ -20,7 +15,7 @@
     >
       <div class="location-box">
         <div class="location">
-          {{ selected }}:<br />
+          {{ place }}:<br />
           {{ weather.latitude }} {{ weather.longitude }}
         </div>
         <div class="date">{{ weather.timezone }}</div>
@@ -44,7 +39,7 @@ export default {
     return {
       api: "",
       url: "https://api.open-meteo.com/v1/forecast?",
-      query: "",
+      place: "",
       lat: "28.00",
       lon: "84.00",
       selected: "Nepal",
@@ -58,10 +53,11 @@ export default {
   },
   methods: {
     fetchWeather(e) {
-      if (e.key == "Enter") {
+      if (e) {
         const place = this.places.find((place) => place.text === this.selected);
         this.lat = place.latitude;
         this.lon = place.longitude;
+        this.place = place.text;
         fetch(
           `${this.url}latitude=${this.lat}&longitude=${this.lon}&current_weather=true`
         )

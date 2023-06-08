@@ -1,45 +1,48 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.weather {
-  width: 50%;
+#weather {
+  width: 100%;
   text-align: center;
   align-items: center;
   margin: auto;
   padding: 30px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(94, 100, 213, 0.25),
-    rgba(35, 71, 215, 0.448)
-  );
+  height: 100%;
 }
 
 .search-box {
   width: 50%;
+  height: 20%;
+  margin: auto;
+}
+.weather-wrap {
+  width: 50%;
+  height: 50%;
   margin: auto;
 }
 
 .search-box select {
   height: 2em;
   font-size: 1.5em;
+  color: #fff;
+  border: none;
   text-align: center;
   width: 50%;
+  background: transparent;
 }
 
 .search-box select option {
   font-size: 0.5em;
+  color: black;
 }
 
 /* CSS */
 button {
+  width: 10%;
+  height: 30%;
   align-items: center;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
-  color: #121212;
+  color: #ffffff;
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
@@ -48,7 +51,7 @@ button {
   font-weight: 700;
   justify-content: center;
   line-height: 1;
-  margin: 10px;
+  margin: 0px 5px;
   outline: none;
   padding: 0.5rem 0.5rem;
   text-align: center;
@@ -62,16 +65,19 @@ button {
 }
 
 button:hover {
-  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  color: aqua;
 }
 
 .location-box {
-  margin-top: 30px;
+  width: auto;
+  height: 30%;
 }
 
 .location-box .location {
   font-size: 32px;
   font-weight: 500;
+  height: 50%;
+  color: aliceblue;
   text-align: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
@@ -79,15 +85,21 @@ button:hover {
 .location-box .date {
   font-size: 20px;
   font-weight: 300;
+  height: 50%;
+  color: aliceblue;
   font-style: italic;
   text-align: center;
 }
 .weather-box {
   text-align: center;
+  width: auto;
+  height: 70%;
 }
 
 .weather-box .temp {
   display: inline-block;
+  width: auto;
+  height: auto;
   padding: 10px 25px;
   color: #fff;
   font-size: 50px;
@@ -102,6 +114,8 @@ button:hover {
 }
 
 .weather-box .weather {
+  width: auto;
+  height: auto;
   color: #fff;
   font-size: 48px;
   font-weight: 700;

@@ -1,5 +1,6 @@
 <template>
   <div id="weather" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+    <Welcome />
     <div class="search-box">
       <select v-model="selected">
         <option v-for="place in places" v-bind:key="place.id">
@@ -15,15 +16,16 @@
     >
       <div class="location-box">
         <div class="location">
-          {{ place }}: {{ weather.latitude }}
-          {{ weather.longitude }}
+          <h3>{{ place }}</h3>
         </div>
-        <div class="date">{{ weather.timezone }}{{ code.code }}</div>
+        <div class="date">
+          {{ weather.timezone }} <br />
+          {{ weather.latitude }}ϕ {{ weather.longitude }}λ
+        </div>
       </div>
       <div class="weather-box">
         <div class="temp">
-          {{ Math.round(temperature) }}°
-
+          {{ Math.round(temperature) }}° <br />
           <button
             id="celsius"
             :class="cel ? 'selected' : 'deselected'"
@@ -55,8 +57,13 @@
 </template>
 
 <script>
+import Welcome from "../components/Welcome.vue";
+
 export default {
   name: "HelloWorld",
+  components: {
+    Welcome,
+  },
   data() {
     return {
       imageUrl:

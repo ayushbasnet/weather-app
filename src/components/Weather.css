@@ -1,44 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 #weather {
   width: 100%;
   text-align: center;
   align-items: center;
-  margin: auto;
-  padding: 30px;
+
+  padding: 0px 20px;
   height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 .search-box {
-  width: 50%;
-  height: 20%;
-  margin: auto;
+  width: 30%;
+  height: 10%;
+  font-family: "Poppins", sans-serif;
 }
 .weather-wrap {
   width: 50%;
-  height: 50%;
+  height: 60%;
   margin: auto;
 }
 
 .search-box select {
   height: 1.8em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #fff;
   border: none;
   text-align: center;
-  width: 50%;
+  width: 30%;
   background: transparent;
 }
 
 .search-box select option {
-  font-size: 0.5em;
+  font-size: 0.8em;
   color: black;
 }
 
 /* CSS */
 button {
-  width: 10%;
-  height: 28%;
+  width: 20%;
+  height: 30%;
   align-items: center;
   background-color: transparent;
   border-radius: 12px;
@@ -48,7 +49,6 @@ button {
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
-  font-family: Inter, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   justify-content: center;
@@ -72,22 +72,26 @@ button:hover {
 
 .location-box {
   width: auto;
-  height: 30%;
+  height: 45%;
 }
 
 .location-box .location {
   font-size: 32px;
   font-weight: 500;
-  height: 50%;
+  height: 60%;
   color: aliceblue;
   text-align: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
 }
 
+.location-box .location h3 {
+  font-size: 2.5em;
+}
+
 .location-box .date {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 300;
-  height: 50%;
+  height: 40%;
   color: aliceblue;
   font-style: italic;
   text-align: center;
@@ -95,12 +99,12 @@ button:hover {
 .weather-box {
   text-align: center;
   width: auto;
-  height: 70%;
+  height: 40%;
 }
 
 .weather-box .temp {
   display: inline-block;
-  width: auto;
+  width: 50%;
   height: auto;
   padding: 10px 25px;
   color: #fff;

@@ -5,6 +5,8 @@
   margin: auto;
   padding: 30px;
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .search-box {
@@ -19,7 +21,7 @@
 }
 
 .search-box select {
-  height: 2em;
+  height: 1.8em;
   font-size: 1.5em;
   color: #fff;
   border: none;
@@ -36,7 +38,7 @@
 /* CSS */
 button {
   width: 10%;
-  height: 30%;
+  height: 28%;
   align-items: center;
   background-color: transparent;
   border-radius: 12px;
@@ -121,4 +123,14 @@ button:hover {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+.selected {
+  font-size: 0.9em;
+  text-shadow: 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: none;
+}
+
+.deselected {
+  color: darkgray;
+  box-shadow: none;
 }
